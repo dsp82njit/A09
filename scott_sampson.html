@@ -17,23 +17,59 @@
             padding: 20px;
             border: 2px solid #800000;
         }
-        /* Navigation bar styles */
+
+        /* Header (updated to match screenshot) */
+        header {
+            background: linear-gradient(to right, #fdf5e6, #fbb03b); /* light yellow to gold */
+            padding: 10px 20px;
+            border-bottom: none;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #800000;
+            font-weight: bold;
+        }
+
+        .header-text p {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #800000;
+        }
+
+        /* Navigation bar styles (maroon bar below header) */
         nav {
-            background-color: #800000;
+            background-color: #5a0000;
             overflow: hidden;
         }
+
         nav ul {
             margin: 0;
             padding: 0;
             list-style: none;
             display: flex;
         }
+
         nav li {
             position: relative;
         }
+
         nav > ul > li {
             float: left;
         }
+
         nav a {
             display: block;
             padding: 14px 20px;
@@ -41,9 +77,11 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         nav a:hover {
             background-color: #a52a2a;
         }
+
         /* Dropdown menu */
         nav ul ul {
             display: none;
@@ -54,68 +92,59 @@
             min-width: 160px;
             z-index: 1;
         }
+
         nav ul li:hover > ul {
             display: block;
         }
+
         nav ul ul li {
             width: 100%;
         }
 
-        header {
-            background: #fbb03b;
-            padding: 10px;
-            text-align: center;
-            border-bottom: 2px solid #800000;
-        }
-        header h1 {
-            margin: 0;
-            color: #800000;
-            font-weight: bold;
-            text-shadow: 1px 1px 1px #ccc;
-        }
-        header p {
-            font-style: italic;
-            font-weight: bold;
-            color: #800000;
-            font-size: 1.3em;
-            text-shadow: 2px 2px 5px #cc0000;
-        }
         .section {
             display: flex;
             margin-top: 20px;
             border-top: 2px solid #800000;
             border-bottom: 2px solid #800000;
         }
+
         .left {
             width: 25%;
             padding-right: 20px;
             border-right: 2px solid #800000;
         }
+
         .right {
             width: 75%;
             padding-left: 20px;
             font-size: 1.15em;
             line-height: 1.6;
         }
+
         h2 {
             color: #a51c30;
         }
+
         .speaker img, .left img {
             width: 100%;
             max-width: 250px;
             margin-top: 5px;
         }
+
         a {
             color: #2b4f81;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         footer {
             background-color: #800000;
             padding: 10px 0;
         }
+
         .footer-text {
             color: white;
             text-align: center;
@@ -126,6 +155,17 @@
     </style>
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="th.jpg" alt="Town Hall Logo">
+            <div class="header-text">
+                <h1>San Joaquin Valley Town Hall</h1>
+                <p>Celebrating our <strong>75<sup>th</sup></strong> Year</p>
+            </div>
+        </div>
+    </header>
 
     <!-- Navigation Bar -->
     <nav>
@@ -151,13 +191,8 @@
         </ul>
     </nav>
 
+    <!-- Page Content -->
     <div class="container">
-        <header>
-            <img src="th.jpg" alt="Town Hall Logo" width="100">
-            <h1>San Joaquin Valley Town Hall</h1>
-            <p>Celebrating our 75<sup>th</sup> Year</p>
-        </header>
-
         <div class="section">
             <div class="left">
                 <h2>Guest speakers</h2>
