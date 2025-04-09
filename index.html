@@ -11,31 +11,42 @@
             background: #fff;
             color: #333;
         }
+
         .container {
             max-width: 1000px;
             margin: auto;
             border: 2px solid #800000;
         }
 
-        /* Header */
+        /* Header Styling (updated to match screenshot) */
         header {
-            background: #800000;
-            color: white;
+            background: linear-gradient(to right, #fdf5e6, #fbb03b); /* light to golden */
+            padding: 10px 20px;
+            border-bottom: 6px solid #5a0000;
+        }
+
+        .header-content {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
         }
-        header img {
-            height: 60px;
+
+        .header-content img {
+            height: 80px;
+            margin-right: 20px;
         }
-        header h1 {
+
+        .header-text h1 {
             margin: 0;
             font-size: 1.8em;
+            color: #5a0000;
+            font-weight: bold;
         }
-        header p {
+
+        .header-text p {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
             font-style: italic;
-            font-size: 1.1em;
+            color: #5a0000;
         }
 
         /* Navigation */
@@ -44,14 +55,46 @@
             display: flex;
             padding: 10px;
         }
+
         nav a {
             color: white;
             margin-right: 20px;
             text-decoration: none;
             font-weight: bold;
         }
+
         nav a:hover {
             text-decoration: underline;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #800000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a51c30;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* Layout */
@@ -59,16 +102,19 @@
             display: flex;
             padding: 20px;
         }
+
         .left {
             width: 30%;
             padding-right: 20px;
             border-right: 2px solid #800000;
         }
+
         .left img {
             width: 100%;
             max-width: 100px;
             margin-top: 5px;
         }
+
         .right {
             width: 70%;
             padding-left: 20px;
@@ -78,6 +124,7 @@
             color: #800000;
             margin-bottom: 5px;
         }
+
         h3 {
             color: #a51c30;
             margin-top: 10px;
@@ -98,6 +145,7 @@
             background-color: #800000;
             padding: 10px 0;
         }
+
         .footer-text {
             color: white;
             text-align: center;
@@ -105,42 +153,19 @@
             font-size: 0.95em;
             margin: 0;
         }
-
-        /* Dropdown (visual only for now) */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #800000;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 8px 12px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #a51c30;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
+
+        <!-- Header (Updated) -->
         <header>
-            <img src="th.jpg" alt="Town Hall Logo">
-            <div>
-                <h1>San Joaquin Valley Town Hall</h1>
-                <p>Celebrating our 75<sup>th</sup> Year</p>
+            <div class="header-content">
+                <img src="th.jpg" alt="Town Hall Logo">
+                <div class="header-text">
+                    <h1>San Joaquin Valley Town Hall</h1>
+                    <p>Celebrating our <strong>75<sup>th</sup></strong> Year</p>
+                </div>
             </div>
         </header>
 
