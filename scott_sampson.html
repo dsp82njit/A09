@@ -17,6 +17,50 @@
             padding: 20px;
             border: 2px solid #800000;
         }
+        /* Navigation bar styles */
+        nav {
+            background-color: #800000;
+            overflow: hidden;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        nav li {
+            position: relative;
+        }
+        nav > ul > li {
+            float: left;
+        }
+        nav a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #a52a2a;
+        }
+        /* Dropdown menu */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #800000;
+            min-width: 160px;
+            z-index: 1;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul li {
+            width: 100%;
+        }
+
         header {
             background: #fbb03b;
             padding: 10px;
@@ -82,6 +126,31 @@
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Speakers</a>
+                <ul>
+                    <li><a href="#">October - David Brancaccio</a></li>
+                    <li><a href="#">November - Andrew Ross Sorkin</a></li>
+                    <li><a href="#">January - Amy Chua</a></li>
+                    <li><a href="#">February - Scott Sampson</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Board Members</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <header>
             <img src="th.jpg" alt="Town Hall Logo" width="100">
